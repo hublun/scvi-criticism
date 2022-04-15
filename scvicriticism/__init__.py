@@ -1,12 +1,11 @@
-"""scvi-tools-skeleton."""
+"""scvi-criticism."""
 
 import logging
 
+from ._scvippc import ScviPPC
+
 from rich.console import Console
 from rich.logging import RichHandler
-
-from ._mymodel import MyModel, MyModule
-from ._mypyromodel import MyPyroModel, MyPyroModule
 
 # https://github.com/python-poetry/poetry/pull/2366#issuecomment-652418094
 # https://github.com/python-poetry/poetry/issues/144#issuecomment-623927302
@@ -15,7 +14,7 @@ try:
 except ModuleNotFoundError:
     import importlib_metadata
 
-package_name = "scvi-tools-skeleton"
+package_name = "scvi-criticism"
 __version__ = importlib_metadata.version(package_name)
 
 logger = logging.getLogger(__name__)
@@ -27,11 +26,11 @@ console = Console(force_terminal=True)
 if console.is_jupyter is True:
     console.is_jupyter = False
 ch = RichHandler(show_path=False, console=console, show_time=False)
-formatter = logging.Formatter("mypackage: %(message)s")
+formatter = logging.Formatter("scvi-criticism: %(message)s")
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 # this prevents double outputs
 logger.propagate = False
 
-__all__ = ["MyModel", "MyModule", "MyPyroModel", "MyPyroModule"]
+__all__ = ["ScviPPC"]

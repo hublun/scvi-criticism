@@ -2,9 +2,9 @@ Installation
 ============
 
 Prerequisites
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
-my_package can be installed via PyPI.
+scvi-criticism can be installed via PyPI.
 
 conda prerequisites
 ###################
@@ -13,11 +13,11 @@ conda prerequisites
 
 2. Create a new conda environment::
 
-    conda create -n scvi-env python=3.7
+    conda create -n scvicriticism-env python=3.7
 
 3. Activate your environment::
 
-    source activate scvi-env
+    source activate scvicriticism-env
 
 pip prerequisites:
 ##################
@@ -30,18 +30,18 @@ pip prerequisites:
 .. _Python: https://www.python.org/downloads/
 .. _PyTorch: http://pytorch.org
 
-my_package installation
-~~~~~~~~~~~~~~~~~~~~~~~
+scvi-criticism installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Install my_package in one of the following ways:
+Install scvi-criticism in one of the following ways:
 
 Through **pip**::
 
-    pip install <my_package>
+    pip install <scvi-criticism>
 
 Through pip with packages to run notebooks. This installs scanpy, etc.::
 
-    pip install <my_package>[tutorials]
+    pip install <scvi-criticism>[tutorials]
 
 Nightly version - clone this repo and run::
 
