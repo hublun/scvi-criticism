@@ -30,7 +30,7 @@ version = "0.1.0"
 
 [tool.poetry.dependencies]
 anndata = ">=0.7.5"
-black = {version = ">=20.8b1", optional = true}
+black = {version = ">=22.3.0", optional = true}
 codecov = {version = ">=2.0.8", optional = true}
 flake8 = {version = ">=3.7.7", optional = true}
 importlib-metadata = {version = "^1.0", python = "<3.8"}
@@ -59,6 +59,7 @@ typing_extensions = {version = "*", python = "<3.8"}
 
 [tool.poetry.extras]
 dev = ["black", "pytest", "flake8", "codecov", "scanpy", "loompy", "jupyter", "nbformat", "nbconvert", "pre-commit", "isort"]
+leandev = ["black", "pytest", "flake8", "codecov", "pre-commit", "isort"]
 docs = [
   "sphinx",
   "scanpydoc",

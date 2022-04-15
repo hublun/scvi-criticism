@@ -1,8 +1,10 @@
 from typing import Dict
+
 import numpy as np
 import pandas as pd
 import scipy.sparse
 from scvi.model.base import BaseModelClass
+
 
 class ScviPPC:
     """
@@ -11,10 +13,12 @@ class ScviPPC:
 
     def __init__(self, n_samples: int = 50, raw_counts: np.ndarray = None):
         """
-        TODO.
+        TOfDO.
         """
         self.raw_counts = (
-            scipy.sparse.coo_matrix(raw_counts) if isinstance(raw_counts, np.ndarray) else None
+            scipy.sparse.coo_matrix(raw_counts)
+            if isinstance(raw_counts, np.ndarray)
+            else None
         )
         self.posterior_predictive_samples = {}
         self.n_samples = n_samples
@@ -119,10 +123,7 @@ class ScviPPC:
             # TODO This used to be point_sample[:, : self.dataset.nb_genes]. Why?
             # TODO mae_gene used to be np.median(...). Why?
             mae_gene = np.mean(
-                np.abs(
-                    point_sample[:, :]
-                    - self.raw_counts.todense()[:, :]
-                )
+                np.abs(point_sample[:, :] - self.raw_counts.todense()[:, :])
             )
 
             df[m] = mae_gene
