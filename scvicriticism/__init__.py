@@ -2,6 +2,8 @@
 
 import logging
 
+from ._scvippc import ScviPPC
+
 from rich.console import Console
 from rich.logging import RichHandler
 
@@ -31,4 +33,4 @@ logger.addHandler(ch)
 # this prevents double outputs
 logger.propagate = False
 
-# __all__ = ["MyModel", "MyModule", "MyPyroModel", "MyPyroModule"]
+__all__ = ["ScviPPC"]

@@ -13,7 +13,7 @@ class ScviPPC:
 
     def __init__(self, n_samples: int = 50, raw_counts: np.ndarray = None):
         """
-        TOfDO.
+        TODO.
         """
         self.raw_counts = (
             scipy.sparse.coo_matrix(raw_counts)
@@ -29,7 +29,7 @@ class ScviPPC:
         self, models_dict: Dict[str, BaseModelClass], batch_size=32
     ):
         """
-        Samples from the Posterior objects and sets raw_counts if None.
+        Gathers posterior predictive samples.
         """
         self.models = models_dict
         self.batch_size = batch_size
